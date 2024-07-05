@@ -10,7 +10,7 @@ function BenefitInit() {
 		renderer: 'svg',
 		loop: false,
 		autoplay: false,
-		path: '/themes/uxda/assets/animation/product_user_business_success.json',
+		path: '/themez/ux/assets/animation/product_user_business_success.json',
 
 	});
 

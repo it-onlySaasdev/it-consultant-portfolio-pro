@@ -1,21 +1,13 @@
-/* @media(max-width:768px)
-@media(max-width:375px)
-@media(max-width:768px)
-
- */
-
-
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400';
-.firstinfo, .badgescard, body {
-  /* display:inline-block; */
-  justify-content: left;
-  align-items: left;
-}
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
+
+/* =======================--------- */
+/* CARD PROFILE DESCRIPTION SECION 
+/* ============================== */
 
 .contenting {
   position: relative;
@@ -24,6 +16,11 @@
 }
 
 
+.firstinfo, .badgescard, body {
+  /* display:inline-block; */
+  justify-content: left;
+  align-items: left;
+}
 
 .Carder {
   width: 430px;
@@ -35,7 +32,7 @@
   position: relative;
   overflow: hidden;
 }
-/* ======== */
+
 .carder-info {
 
   width: 430px;
@@ -57,9 +54,6 @@
   -webkit-animation: rotatemagic 0.75s cubic-bezier(0.425, 1.04, 0.47, 1.105) 1s both;
           animation: rotatemagic 0.75s cubic-bezier(0.425, 1.04, 0.47, 1.105) 1s both;
 }
-
-/* ==========  */
-
 
 .badgescard {
   padding: 10px 20px;
@@ -93,11 +87,9 @@
   width: 120px;
   height: 120px;
 }
+
 .firstinfo .profileinfo {
-  /* padding: 6px 64px 4px 73px;
-  position: relative;
-  left: 61px;
-  bottom: 120px; */
+
     padding: 0px 0px 0px;
     position: relative;
     left: 130px;
@@ -149,7 +141,6 @@
   font-style: normal;
 
 }
-
 
 
 .firstinfo .profileinfo p.bio {
@@ -229,13 +220,12 @@
     top: -24px;
     left: -78px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
 
 
-
-
-
-/* ============== NEW NAV =========== */
+/* =======================--------- */
+/* HEADER NAV SECION
+/* ============================== */
 
 header{
   background-color: #020202;
