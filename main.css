@@ -712,12 +712,7 @@ ul.stark-menu {
   font-size: 13px;
   color: #000;
 }
-  
-.skillinfo {
-  font-weight: 100;
-  font-size: 13px;
-}
-    
+
 .userinfo {
 
   font-weight: 500;
@@ -959,11 +954,7 @@ ul.stark-menu {
      left: 5%!important;
   }
 
-  .skillinfo {
 
-    font-weight: 300;
-    font-size: 14px;
-  }
 
   .user-info {
     font-weight: 500;
