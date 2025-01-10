@@ -559,6 +559,34 @@ i {
   animation: jump 800ms infinite;
 }
 
+/* ===== tele == */
+
+.telegram-api- {
+  position: fixed;
+  bottom: 9.5px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  transition: all 150ms ease;
+  transform: scale(0);
+	outline: none;
+	cursor: pointer;
+  background-color: transparent;
+}
+.telegram-api-:focus {
+  outline: none;
+}
+
+.fa-sort-up {
+  color: #088def;
+  margin-top: 15px;
+}
+
+.telegram-api-:hover .fa-sort-up {
+  animation: jump 800ms infinite;
+}
+
 @keyframes jump {
   50% {
     transform: translateY(-10px);
