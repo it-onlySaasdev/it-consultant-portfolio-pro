@@ -673,31 +673,31 @@
     <script>
         // ----- es6 basic declaration popup js----- //
         const loginPopup = document.querySelector(".login-popup");
-        const close = document.querySelector(".close-btn");
-        const bton = document.getElementById('open_modal');
-        bton.addEventListener("click", function() {
-            // buttonElement.addEventListener('click', function (event) {
-            showPopup();
-            // setTimeout(function(){
-            //   loginPopup.classList.add("show");
-            // },5000)
-        })
+const close = document.querySelector(".close-btn");
+const bton = document.getElementById("open_modal");
 
-        function showPopup() {
-            const timeLimit = 5 // seconds;
-            let i = 0;
-            const timer = setInterval(function() {
-                i++;
-                if (i == timeLimit) {
-                    clearInterval(timer);
-                    loginPopup.classList.add("show");
-                }
-                console.log(i)
-            }, 200);
-        }
-        close.addEventListener("click", function() {
-            loginPopup.classList.remove("show");
-        })
+if (loginPopup && close && bton) {
+    // Open the modal
+    bton.addEventListener("click", function () {
+        document.body.classList.add("no-scroll"); // Disable scrolling
+        showPopup();
+    });
+
+    // Close the modal
+    close.addEventListener("click", function () {
+        document.body.classList.remove("no-scroll"); // Enable scrolling
+        loginPopup.classList.remove("show");
+    });
+}
+
+// Show the popup after a delay
+function showPopup() {
+    const timeLimit = 1000; // 5 seconds
+    setTimeout(function () {
+        loginPopup.classList.add("show");
+    }, timeLimit);
+}
+
     </script>
 
 <!-- ======== tele api ======= -->
