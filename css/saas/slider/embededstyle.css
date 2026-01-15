@@ -28,7 +28,7 @@
 .team-header{margin-top:180px;margin-bottom:40px}
 .team-header h3{margin-top:80px;margin-bottom:16px}
 .team-header p{margin-top:16px;margin-bottom:16px}
-.team-love{margin-top:40px;margin-bottom:320px;max-width:100%}
+.team-love{margin-top:0px;margin-bottom:0px;max-width:100%}
 .team-love img{max-height:530px;object-fit:contain;margin-right:16px;min-width:auto}
 .horizontal-img-scroll{display:flex;overflow-x:auto;padding-top:52px;padding-bottom:52px}
 .horizontal-img-scroll::-webkit-scrollbar{height:4px}

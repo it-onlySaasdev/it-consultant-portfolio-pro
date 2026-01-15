@@ -2642,7 +2642,7 @@ a {
 
 /* If still overlapping, add this for extra safety */
 section:not(.hero-section) {
-    margin-top: 50px !important;
+    margin-top: 0px !important;
     position: relative;
     z-index: 1;
 }
@@ -3530,4 +3530,315 @@ img[data-src].loaded {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* ========= FIX FULL MOBILE RESPONSIVENESS ========== */ 
+
+/* ==================================================
+   MOBILE-ONLY RESPONSIVENESS FIXES
+   Added: 2026 | Strictly no desktop impact
+   Only applies below 992px (Bootstrap md breakpoint)
+   ================================================== */
+
+@media (max-width: 991.98px) {
+
+  /* Hero / view section adjustments */
+  .view,
+  .mask.rgba-black-light {
+    min-height: 85vh;
+    padding-top: 5rem;          /* space under fixed navbar */
+    padding-bottom: 3rem;
+  }
+
+  /* Text column takes full width when video is hidden */
+  .row.mt-5 > .col-md-7.hero_head {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  /* Hide video container completely on mobile */
+  .video-container,
+  .col-md-5.wow.fadeInRight.animated.video-container,
+  .demo-showcase,
+  .img_reviewApp {
+    display: none !important;
+  }
+
+  /* Hero headline readability */
+  .Hero-top {
+    font-size: clamp(2rem, 7vw, 2.6rem) !important;
+    line-height: 1.18 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  h6.text-uppercase.mb-3 {
+    font-size: 1rem !important;
+    letter-spacing: 1.8px !important;
+  }
+
+  /* Secondary text */
+  .hero_head h4.mb-3.pt-4.pb-4 {
+    font-size: clamp(1.05rem, 4.2vw, 1.3rem) !important;
+    padding: 1rem 0 !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Tech badges — better mobile flow */
+  .tech-badges {
+    gap: 0.55rem !important;
+    margin: 1.2rem 0 !important;
+    justify-content: center !important;
+  }
+
+  .tech-badge {
+    font-size: 0.82rem !important;
+    padding: 0.35rem 0.85rem !important;
+  }
+
+  /* Profile image & icons scaling */
+  .large_Profile_img {
+    max-width: 130px !important;
+    margin: 0 auto 1rem !important;
+  }
+
+  .profileinfo .userinfo {
+    font-size: 1.1rem !important;
+  }
+
+  .profileinfo .skillinfo {
+    font-size: 0.9rem !important;
+  }
+
+  .treatment-methods__icons {
+    gap: 0.7rem !important;
+    justify-content: center !important;
+  }
+
+  .treatment-method__icon__outer_circle svg.treatment-methods_icon {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  /* CTA buttons — stack & widen */
+  .hero-cta {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .hero-cta .btn {
+    width: 100% !important;
+    padding: 0.85rem 1.4rem !important;
+    font-size: 1.05rem !important;
+  }
+}
+
+/* Very small screens – extra safety (iPhone SE, older Androids etc.) */
+@media (max-width: 575.98px) {
+
+  .Hero-top {
+    font-size: clamp(1.75rem, 6.5vw, 2.3rem) !important;
+  }
+
+  h6.text-uppercase.mb-3 {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-cta .btn {
+    font-size: 1rem !important;
+    padding: 0.75rem 1.2rem !important;
+  }
+
+  .large_Profile_img {
+    max-width: 110px !important;
+  }
+
+  .treatment-method__icon__outer_circle svg.treatment-methods_icon {
+    width: 34px !important;
+    height: 34px !important;
+  }
+}
+
+/* ======= fix profile adjustments on mobile =======  */
+
+/* ==================================================
+   TARGETED FIXES for large_Profile_img_container & related elements
+   Mobile-only — no desktop impact
+   Added for better fit on phones/tablets
+   ================================================== */
+
+@media (max-width: 991.98px) {
+
+  /* 1. Fix large_Profile_img_container — prevent overflow, better centering & scaling */
+  .large_Profile_img_container {
+    display: flex !important;
+    flex-direction: column !important;     /* stack image + info vertically */
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 320px !important;           /* cap width to avoid edge-to-edge stretch */
+    margin: 1.5rem auto !important;        /* center + breathing room */
+  }
+
+  .large_Profile_img {
+    width: 120px !important;               /* smaller but still clear */
+    height: 120px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;         /* optional: nice circular look */
+    margin-bottom: 1rem !important;
+  }
+
+  /* 2. skillinfo — smaller, centered, better line-height */
+  .skillinfo {
+    font-size: 0.88rem !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+    margin: 0.4rem 0 0.8rem 0 !important;
+    color: #a0a0a0 !important;             /* slightly softer if needed */
+    max-width: 90% !important;
+  }
+
+  /* 3. userinfo — bolder, centered, readable size */
+  .userinfo {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin-bottom: 0.3rem !important;
+    color: #4285f4 !important;
+    letter-spacing: 0.4px !important;
+  }
+
+  /* 4. treatment-methods__icons — tighter grid, centered, smaller icons */
+  .treatment-methods__icons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.9rem !important;                /* balanced spacing */
+    margin-top: 1rem !important;
+    max-width: 280px !important;
+  }
+
+  .treatment-method__icon__container {
+    flex: 0 0 auto !important;
+  }
+
+  .treatment-method__icon__outer_circle {
+    width: 54px !important;
+    height: 54px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .treatment-methods_icon {
+    width: 36px !important;
+    height: 36px !important;
+    transform: scale(0.92) !important;     /* slight shrink to fit circle nicely */
+  }
+}
+
+/* Extra polish for very small screens (≤ 576px) */
+@media (max-width: 575.98px) {
+
+  .large_Profile_img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .userinfo {
+    font-size: 1.05rem !important;
+  }
+
+  .skillinfo {
+    font-size: 0.82rem !important;
+  }
+
+  .treatment-methods__icons {
+    gap: 0.7rem !important;
+    max-width: 240px !important;
+  }
+
+  .treatment-method__icon__outer_circle {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .treatment-methods_icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+/* === re-adjust fix == */
+
+/* ==================================================
+   FIX: skillinfo text fit + icons horizontal & small on mobile
+   Only affects < 992px — desktop unchanged
+   ================================================== */
+
+@media (max-width: 991.98px) {
+
+  /* 1. skillinfo – prevent wrapping, make text smaller + fit in one line */
+  .skillinfo {
+    text-align: center !important;                /* better visual balance than left */
+    font-size: clamp(0.78rem, 3.4vw, 0.86rem) !important;   /* scales nicely */
+    line-height: 1.25 !important;
+    letter-spacing: -0.2px !important;            /* slight compression */
+    white-space: nowrap !important;               /* ← key: force single line */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;           /* add … if still too long */
+    max-width: 100% !important;
+    padding: 0 8px !important;                    /* tiny side padding */
+    margin: 0.4rem auto 0.8rem auto !important;
+  }
+
+  /* 2. treatment-methods__icons – keep horizontal, make icons smaller & tighter */
+  .treatment-methods__icons {
+    display: flex !important;
+    flex-wrap: nowrap !important;                 /* ← force horizontal, no wrap */
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.6rem !important;                       /* very tight spacing */
+    margin: 1rem auto 0 auto !important;
+    padding: 0 10px !important;
+    max-width: 100% !important;
+  }
+
+  .treatment-method__icon__outer_circle {
+    width: 44px !important;                       /* smaller circle */
+    height: 44px !important;
+    padding: 4px !important;
+  }
+
+  .treatment-methods_icon {
+    width: 28px !important;                       /* icons themselves smaller */
+    height: 28px !important;
+    transform: scale(0.9) !important;
+  }
+}
+
+/* Extra safety for very narrow screens (≤ 360px) */
+@media (max-width: 360px) {
+
+  .skillinfo {
+    font-size: clamp(0.72rem, 3.2vw, 0.78rem) !important;
+    letter-spacing: -0.4px !important;            /* squeeze more */
+  }
+
+  .treatment-methods__icons {
+    gap: 0.45rem !important;                      /* even tighter */
+  }
+
+  .treatment-method__icon__outer_circle {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .treatment-methods_icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
 }
